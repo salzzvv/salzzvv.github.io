@@ -1,13 +1,45 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title>berhasil</title>
+  <meta charset="UTF-8">
+  <title>Music Circle</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .circle-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s;
+    }
+
+    .circle-img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-  <h1>
-    berhasil
-  </h1>
+
+  <img src="1.jpg" class="circle-img" onclick="playMusic()" alt="Circle Image">
+
+  <audio id="music" src="1.mp3"></audio>
+
+  <script>
+    function playMusic() {
+      const audio = document.getElementById("music");
+      audio.play();
+    }
+  </script>
+
 </body>
 </html>
